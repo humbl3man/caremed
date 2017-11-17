@@ -1,0 +1,38 @@
+$fa-font-path: './../../node_modules/font-awesome/fonts';
+@import './../../node_modules/font-awesome/scss/font-awesome.scss';
+
+.icon {
+	@extend .fa;
+
+	&-navicon {
+		@extend .fa-navicon;
+	}
+
+	&-facebook {
+		@extend .fa-facebook-official;
+	}
+
+	&-yelp {
+		@extend .fa-yelp;
+	}
+
+	&-instagram {
+		@extend .fa-instagram;
+	}
+
+	&-ambulance {
+		@extend .fa-ambulance;
+	}
+
+	&-star {
+		@extend .fa-star;
+	}
+
+	&-clock {
+		@extend .fa-clock-o;
+	}
+
+	&-calendar {
+		@extend .fa-calendar-check-o;
+	}
+}

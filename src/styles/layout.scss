@@ -1,0 +1,184 @@
+@import './_settings.scss';
+@import './_helpers.scss';
+
+body {
+	background: #fafafa;
+}
+
+@mixin flex($justify-content: null, $align-items: null ) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+// 3 columns
+.row-3-across {
+	@include flex(space-between);
+
+	> div {
+		flex: 1 1 33.33%;
+		margin-right: 50px;
+
+		> * {
+			height: 100%;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	@media only screen and (min-width: 767px) and (max-width: 1024px) {
+		& {
+			flex-wrap: wrap;
+		}
+
+		> div {
+			flex: 1 0 calc(50% - 25px);
+			margin-right: 25px;
+			margin-bottom: 30px;
+			width: 50%;
+
+			&:nth-child(2) {
+				margin-right: 0;
+			}
+			&:last-child {
+				flex-basis: 100%;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 767px) {
+		& {
+			flex-wrap: wrap;
+		}
+
+		> div {
+			flex-basis: 100%;
+			margin: 0 0 30px;
+		}
+	}
+}
+
+.row-4-across {
+	@include flex(center);
+	flex-wrap: wrap;
+
+	> div {
+		margin: 0 10px 30px 0;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.bucket {
+	padding: 15px 25px;
+	background: #fff;
+	border: 1px solid #eee;
+	box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+
+	&--alt {
+		border-color: $caremedRed;
+	}
+}
+
+.nav {
+	span {
+		display: inline-block;
+		margin-right: 15px;
+	}
+
+	.mobile-toggle {
+		color: #fff;
+		cursor: pointer;
+		transform: scale(1.2);
+
+		@media only screen and (min-width: 767px) {
+			display: none;
+		}
+	}
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: rgba(#fff, 0.7);
+		font-weight: 400;
+		display: inline-block;
+		&:last-child {
+			margin-right: 0;
+		}
+		&:hover,
+		&.active {
+			color: #fff;
+		}
+	}
+}
+
+.site-header {
+	background-color: $caremedRed;
+	background: radial-gradient(
+		scale-color($caremedRed, $lightness: 20%),
+		$caremedRed
+	);
+
+	.brand {
+		a {
+			text-decoration: none;
+		}
+
+		h3 {
+			color: #fff;
+			margin: 0;
+		}
+	}
+
+	.inner-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 80px;
+	}
+}
+
+.site-content {
+	margin-top: 60px;
+}
+
+// Footer
+.site-footer {
+	padding: 2rem 0;
+	background: #eee;
+}
+
+.site-footer__inner {
+	display: flex;
+	justify-content: space-between;
+}
+
+.copyright {
+	flex: 0 0 40%;
+}
+
+.site-footer .social {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.site-footer .social li {
+	display: inline-block;
+	margin-right: 10px;
+	opacity: 0.75;
+}
+
+.site-footer .social li:hover {
+	opacity: 1;
+}
+
+.site-footer .social li:last-child {
+	margin-right: 0;
+}
+
+.site-footer .social img {
+	width: 32px;
+}
