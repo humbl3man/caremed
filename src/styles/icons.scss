@@ -35,4 +35,8 @@ $fa-font-path: './../../node_modules/font-awesome/fonts';
 	&-calendar {
 		@extend .fa-calendar-check-o;
 	}
+
+	&-check {
+		@extend .fa-check;
+	}
 }
