@@ -2,7 +2,7 @@ import React from 'react';
 import Container from './../components/container';
 import Slider from 'react-slick';
 
-import './../styles/services.scss';
+import './../styles/slider.scss';
 
 import serviceImage1 from './../images/services-1.jpg';
 import serviceImage2 from './../images/services-2.jpg';
@@ -11,13 +11,7 @@ import serviceImage4 from './../images/services-4.jpg';
 import serviceImage5 from './../images/services-5.jpg';
 import serviceImage6 from './../images/services-6.jpg';
 
-const carouselOptions = {
-	emulateTouch: true,
-	showThumbs: false,
-	showStatus: false
-};
-
-var reactSliderOptions = {
+const reactSliderOptions = {
 	dots: false,
 	infinite: false,
 	speed: 500,
@@ -63,7 +57,9 @@ export default () => (
 		<Container>
 			<div className="services">
 				<div style={{ textAlign: 'center' }}>
-					<h1>Services</h1>
+					<h1>
+						<strong>Services</strong>
+					</h1>
 					<p>
 						Care MED transport provides Wheelchair Transport Service
 						7 days a week, 24 hours a day to provide a quality and
