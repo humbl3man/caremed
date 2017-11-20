@@ -10,6 +10,8 @@ import serviceImage3 from './../images/services-3.jpg';
 import serviceImage4 from './../images/services-4.jpg';
 import serviceImage5 from './../images/services-5.jpg';
 import serviceImage6 from './../images/services-6.jpg';
+import serviceImage7 from './../images/services-7.jpg';
+import serviceImage8 from './../images/services-8.jpg';
 
 const reactSliderOptions = {
 	dots: false,
@@ -89,6 +91,12 @@ export default () => (
 						<div className="slider-item">
 							<img src={serviceImage6} />
 						</div>
+						<div className="slider-item">
+							<img src={serviceImage7} />
+						</div>
+						<div className="slider-item">
+							<img src={serviceImage8} />
+						</div>
 					</Slider>
 				</div>
 			</div>
@@ -99,7 +107,7 @@ export default () => (
 				}
 
 				.slider-item img {
-					max-width: 100%;
+					width: 100%;
 					height: auto;
 				}
 			`}</style>
