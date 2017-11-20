@@ -19,7 +19,7 @@ const HaveQuestions = () => {
 							isLink={true}
 							size="small"
 							cssClass="callout-btn--secondary"
-							to="/"
+							to="/faq"
 						>
 							Visit our FAQ Page{' '}
 							<i className="icon icon-double-right" />
@@ -56,9 +56,11 @@ const HaveQuestions = () => {
 				@media only screen and (max-width: 767px) {
 					.have-questions .flex-wrapper {
 						flex-wrap: wrap;
+						height: auto;
 					}
-					.have-questions .flex-wrapper > div {
-						flex: 0 0 100%;
+					.have-questions .flex-wrapper > div:first-child {
+						flex-basis: 100%;
+						margin-bottom: 15px;
 					}
 				}
 			`}</style>

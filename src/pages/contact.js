@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from './../components/container';
 import ContactForm from './../components/contact-form';
+import config from './../config';
 
 const iframeSrc =
 	'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53066.79053654933!2d-118.0035533045438!3d33.76907855495819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd283f9d1dcd8d%3A0x3909622bd0f8b3a!2sGarden+Grove%2C+CA!5e0!3m2!1sen!2sus!4v1510722316762';
@@ -38,7 +39,11 @@ export default () => (
 	<div className="site-content">
 		<Container>
 			<h1>
-				<strong>Make an Appointment</strong>
+				<strong>
+					{config.showContactForm
+						? 'Make an Appointment'
+						: 'Contact Us'}
+				</strong>
 			</h1>
 			<div className="contact">
 				<div>
@@ -58,8 +63,7 @@ export default () => (
 							<a href="tel:+17142095739">(714) 209 - 5739</a>{' '}
 						</p>
 					</div>
-
-					<ContactForm />
+					{config.showContactForm && <ContactForm />}
 				</div>
 
 				<div>
