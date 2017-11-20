@@ -8,7 +8,7 @@ a.callout-btn {
 	border: 1px solid;
 	text-transform: uppercase;
 	display: inline-block;
-	transition: 200ms ease-in-out;
+	transition: 340ms ease-in-out;
 	border-radius: 3px;
 	cursor: pointer;
 	box-shadow: 0 4px 20px rgba(#000, 0.18);
@@ -32,10 +32,12 @@ a.callout-btn {
 
 	&--primary {
 		color: #fff;
-		border-color: $caremedBlue;
-		background: $caremedBlue;
+		border-color: scale-color($caremedBlue, $lightness: -15%);
+		background: scale-color($caremedBlue, $lightness: -15%);
 		&:hover {
 			color: #fff;
+			border-color: $caremedBlue;
+			background: $caremedBlue;
 		}
 	}
 
@@ -50,10 +52,12 @@ a.callout-btn {
 
 	&--secondary {
 		color: #fff;
-		border-color: $caremedRed;
-		background: $caremedRed;
+		border-color: scale-color($caremedRed, $lightness: -10%);
+		background: scale-color($caremedRed, $lightness: -10%);
 		&:hover {
 			color: #fff;
+			border-color: $caremedRed;
+			background: $caremedRed;
 		}
 	}
 }
