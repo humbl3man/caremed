@@ -39,4 +39,12 @@ $fa-font-path: './../../node_modules/font-awesome/fonts';
 	&-check {
 		@extend .fa-check;
 	}
+
+	&-double-right {
+		@extend .fa-angle-double-right;
+	}
+
+	&-double-left {
+		@extend .fa-angle-double-left;
+	}
 }
