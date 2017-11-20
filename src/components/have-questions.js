@@ -17,10 +17,12 @@ const HaveQuestions = () => {
 					<div>
 						<Button
 							isLink={true}
+							size="small"
 							cssClass="callout-btn--secondary"
 							to="/"
 						>
-							Visit our FAQs Page
+							Visit our FAQ Page{' '}
+							<i className="icon icon-double-right" />
 						</Button>
 					</div>
 				</div>
@@ -35,6 +37,7 @@ const HaveQuestions = () => {
 				.have-questions h3 {
 					margin: 0;
 					color: #fff;
+					font-size: 1.3rem;
 				}
 
 				.have-questions .flex-wrapper {
@@ -43,6 +46,19 @@ const HaveQuestions = () => {
 					align-items: center;
 					padding: 0 30px;
 					height: 120px;
+				}
+
+				.have-questions .flex-wrapper > div:first-child {
+					flex-basis: 70%;
+				}
+
+				@media only screen and (max-width: 767px) {
+					.have-questions .flex-wrapper {
+						flex-wrap: wrap;
+					}
+					.have-questions .flex-wrapper > div {
+						flex: 0 0 100%;
+					}
 				}
 			`}</style>
 		</div>
