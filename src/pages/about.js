@@ -1,19 +1,13 @@
 import React from 'react';
 import Container from './../components/container';
 
-import aboutPic from './../images/about.jpg';
-
 export default () => (
 	<Container>
 		<div className="site-content">
-			<h1>
-				<strong>About Us</strong>
-			</h1>
-
 			<div className="about">
-				<div className="about__image">
-					<img src={aboutPic} alt="Caremed Transport" />
-				</div>
+				<h1>
+					<strong>About Us</strong>
+				</h1>
 				<div className="about__description">
 					<p>
 						Care MED Transport is a privately owned and operated
@@ -37,28 +31,8 @@ export default () => (
 		</div>
 		<style jsx>{`
 			.about {
-				display: flex;
-				justify-content: space-between;
-			}
-
-			.about__image {
-				flex: 0 0 35%;
-				margin-right: 10%;
-			}
-
-			.about__image img {
-				width: 100%;
-				height: auto;
-			}
-
-			@media only screen and (max-width: 767px) {
-				.about {
-					flex-wrap: wrap;
-				}
-
-				.about__image {
-					display: none;
-				}
+				max-width: 600px;
+				margin: 80px auto;
 			}
 		`}</style>
 	</Container>
