@@ -17,24 +17,10 @@ import yelp from './../images/yelp.png';
 import GlobalNav from './../components/global-nav';
 import HaveQuestions from './../components/have-questions';
 
-const links = [
-	{
-		url: '/',
-		label: 'Home'
-	},
-	{
-		url: '/about',
-		label: 'About Us'
-	},
-	{
-		url: '/services',
-		label: 'Services'
-	},
-	{
-		url: '/contact',
-		label: 'Contact'
-	}
-];
+import logo from './../images/cmt-logo.png';
+
+// Config
+import config from './../config';
 
 const Header = () => (
 	<header className="site-header">
@@ -42,10 +28,10 @@ const Header = () => (
 			<div className="inner-header">
 				<div className="brand">
 					<Link to="/" activeClassName="active">
-						<h3>Caremed Transport</h3>
+						<img src={logo} />
 					</Link>
 				</div>
-				<GlobalNav links={links} />
+				<GlobalNav links={config.links} />
 			</div>
 		</Container>
 	</header>

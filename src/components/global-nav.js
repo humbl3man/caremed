@@ -2,44 +2,21 @@ import React, { Component } from 'react';
 import Link from 'gatsby-link';
 
 const MobileNav = props => {
-	const { links, isShown } = props;
+	const { links, isShown, handleClick } = props;
 
 	return (
 		<div className={isShown ? 'mobile-nav' : 'mobile-nav hidden'}>
 			{links.map((link, index) => (
-				<span key={index}>
-					<Link activeClassName="active" exact to={link.url}>
-						{link.label}
-					</Link>
-				</span>
+				<Link
+					key={index}
+					activeClassName="active"
+					exact
+					to={link.url}
+					onClick={() => handleClick()}
+				>
+					{link.label}
+				</Link>
 			))}
-
-			<style jsx>{`
-				.mobile-nav {
-					background: #8e0217;
-					left: 0;
-					padding: 20px;
-					position: absolute;
-					top: 80px;
-					width: 100%;
-				}
-
-				.mobile-nav span {
-					display: block;
-					margin-bottom: 25px;
-					font-size: 17px;
-				}
-
-				.mobile-nav span:last-child {
-					margin-bottom: 0;
-				}
-
-				@media only screen and (min-width: 767px) {
-					.mobile-nav {
-						display: none;
-					}
-				}
-			`}</style>
 		</div>
 	);
 };
@@ -83,6 +60,12 @@ export default class Navigation extends Component {
 		});
 	};
 
+	closeMobileNav = () => {
+		this.setState({
+			isMobileNavShown: false
+		});
+	};
+
 	render() {
 		return (
 			<nav className="nav">
@@ -94,6 +77,7 @@ export default class Navigation extends Component {
 				<MobileNav
 					links={this.props.links}
 					isShown={this.state.isMobileNavShown}
+					handleClick={this.closeMobileNav}
 				/>
 			</nav>
 		);

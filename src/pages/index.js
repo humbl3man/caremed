@@ -38,9 +38,7 @@ const Hero = ({ cssClass, text }) => {
 		<div className={`hero ${cssClass}`}>
 			<FlexContainer className="hero-flex">
 				<h1>Care Med Transport</h1>
-				<h3>
-					{text}
-				</h3>
+				<h3>{text}</h3>
 				<div>
 					<Button {...heroButtonProps}>Schedule Appointment</Button>
 				</div>
@@ -117,13 +115,22 @@ const IndexPage = () => (
 	<div>
 		<HeroSlider {...heroSliderOptions}>
 			<div>
-				<Hero cssClass="hero-1" text="We are a Non-Emergency Medical Transportation services that understands your needs." />
+				<Hero
+					cssClass="hero-1"
+					text="We are a Non-Emergency Medical Transportation services that understands your needs."
+				/>
 			</div>
 			<div>
-				<Hero cssClass="hero-2" text="We provide the best quality services for Wheelchair Transportation and Ambulatory Services 24/7." />
+				<Hero
+					cssClass="hero-2"
+					text="We provide the best quality services for Wheelchair Transportation and Ambulatory Services 24/7."
+				/>
 			</div>
 			<div>
-				<Hero cssClass="hero-3" text="We are here to provide safe, convenient and reliable transportation to your chosen destination." />
+				<Hero
+					cssClass="hero-3"
+					text="We are here to provide safe, convenient and reliable transportation to your chosen destination."
+				/>
 			</div>
 		</HeroSlider>
 
@@ -220,7 +227,7 @@ const IndexPage = () => (
 
 			<style jsx>{`
 				.extra {
-					padding: 110px 30px;
+					padding: 120px 30px;
 					text-align: center;
 					background-color: #222;
 					background-image: linear-gradient(
@@ -229,6 +236,7 @@ const IndexPage = () => (
 						),
 						url(${splashImage});
 					background-position: center;
+					background-attachment: fixed;
 					background-size: cover;
 					background-repeat: no-repeat;
 				}
@@ -268,8 +276,7 @@ const IndexPage = () => (
 					<strong>
 						{' '}
 						Care MED Transport is a Non-Emergency Transportation
-						service specializing in wheelchair and gurney
-						transportation to:
+						service specializing in wheelchair transportation to:
 					</strong>
 				</h3>
 				<div className="featured-bottom-wrapper">
@@ -341,10 +348,6 @@ const IndexPage = () => (
 					margin-left: 10px;
 				}
 
-				.featured-bottom .title {
-					text-align: center;
-				}
-
 				.featured-bottom-wrapper {
 					display: flex;
 					justify-content: center;
@@ -362,8 +365,13 @@ const IndexPage = () => (
 					justify-content: center;
 					align-items: center;
 					text-align: center;
-					margin: 15px;
+					margin: 15px 2.5%;
 					padding: 24px;
+					transition: background 600ms ease-in-out;
+				}
+
+				.featured-bottom-wrapper > div:hover {
+					background: #cddbea;
 				}
 
 				@media only screen and (max-width: 767px) {

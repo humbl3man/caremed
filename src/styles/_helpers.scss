@@ -1,5 +1,19 @@
+.cf:before,
+.cf:after {
+	content: '';
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
 .hidden {
 	display: none;
+}
+
+.text-center {
+	text-align: center;
 }
 
 .visually-hidden {

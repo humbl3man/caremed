@@ -10,7 +10,7 @@ const SideLink = ({ to, children }) => {
 
 export default () => (
 	<Container>
-		<div className="site-content">
+		<div className="site-content generic-content">
 			<aside className="side-nav">
 				<Link to="/about" activeClassName="active">
 					About <i className="icon icon-double-right" />

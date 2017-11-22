@@ -14,3 +14,13 @@
 .slick-next {
 	transform: translate(0, -50%) rotate(135deg);
 }
+
+.slick-dots {
+	transform: translateY(-10px);
+	.slick-active button:before {
+		opacity: 0;
+	}
+	li button:before {
+		font-size: 12px;
+	}
+}

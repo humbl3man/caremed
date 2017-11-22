@@ -117,22 +117,46 @@ body {
 			color: #fff;
 		}
 	}
+
+	@media only screen and (max-width: 767px) {
+		.mobile-nav {
+			background: #8e0217;
+			left: 0;
+			padding: 20px;
+			position: absolute;
+			top: 80px;
+			width: 100%;
+			z-index: 999;
+		}
+
+		.mobile-nav a {
+			display: block;
+			margin-bottom: 25px;
+			font-size: 17px;
+		}
+
+		.mobile-nav a:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	@media only screen and (min-width: 767px) {
+		.mobile-nav {
+			display: none;
+		}
+	}
 }
 
 .site-header {
-	background-color: $caremedRed;
-	background: radial-gradient(
-		scale-color($caremedRed, $lightness: 20%),
-		$caremedRed
-	);
+	background-color: #b3001b;
+	background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 
 	.brand {
 		a {
 			text-decoration: none;
 		}
 
-		h3 {
-			color: #fff;
+		img {
 			margin: 0;
 		}
 	}
@@ -147,6 +171,7 @@ body {
 
 .site-content {
 	margin-top: 60px;
+	margin-bottom: 60px;
 }
 
 // Footer
