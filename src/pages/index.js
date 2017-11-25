@@ -46,9 +46,10 @@ const Hero = ({ cssClass, text }) => {
 
 			<style jsx>{`
 				.hero h1 {
-					color: #fff;
+					color: #b3001b;
 					font-size: 3rem;
 					margin-bottom: 10px;
+					font-weight: bold;
 				}
 				.hero h3 {
 					font-size: 1.5rem;
@@ -236,7 +237,6 @@ const IndexPage = () => (
 						),
 						url(${splashImage});
 					background-position: center;
-					background-attachment: fixed;
 					background-size: cover;
 					background-repeat: no-repeat;
 				}
@@ -250,6 +250,10 @@ const IndexPage = () => (
 					display: flex;
 					justify-content: space-between;
 					align-items: center;
+				}
+
+				@media only screen and (min-width: 1024px) {
+					background-attachment: fixed;
 				}
 
 				@media only screen and (min-width: 767px) and (max-width: 1024px) {

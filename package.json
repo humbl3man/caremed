@@ -4,7 +4,6 @@
 	"version": "1.0.0",
 	"author": "Kyle Mathews <mathews.kyle@gmail.com>",
 	"dependencies": {
-		"axios": "^0.17.1",
 		"gatsby": "^1.9.102",
 		"gatsby-link": "^1.6.24",
 		"gatsby-plugin-react-helmet": "^1.0.8",
@@ -13,11 +12,14 @@
 		"gatsby-plugin-typography": "^1.7.10",
 		"prop-types": "^15.6.0",
 		"react-slick": "^0.15.4",
+		"scroll": "^2.0.1",
 		"slick-carousel": "^1.8.1",
 		"typography": "^0.16.6",
 		"typography-theme-funston": "^0.15.10",
 		"typography-theme-irving": "^0.15.10",
-		"typography-theme-moraga": "^0.15.10"
+		"typography-theme-moraga": "^0.15.10",
+		"typography-theme-twin-peaks": "^0.15.11",
+		"unfetch": "^3.0.0"
 	},
 	"keywords": [
 		"gatsby"
@@ -32,6 +34,7 @@
 	},
 	"devDependencies": {
 		"font-awesome": "^4.7.0",
-		"prettier": "^1.8.1"
+		"prettier": "^1.8.1",
+		"scroll-doc": "^0.2.1"
 	}
 }

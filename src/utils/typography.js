@@ -1,6 +1,6 @@
 import Typography from 'typography';
-import Theme from 'typography-theme-moraga';
+import MoragaTheme from 'typography-theme-moraga';
 
-const typography = new Typography(Theme);
+const typography = new Typography(MoragaTheme);
 
 export default typography;

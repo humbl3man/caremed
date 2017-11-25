@@ -31,7 +31,6 @@ const Button = props => {
 };
 
 Button.propTypes = {
-	children: PropTypes.array,
 	className: PropTypes.string,
 	isLink: PropTypes.bool,
 	size: PropTypes.string,

@@ -1,5 +1,7 @@
 const config = {
-	showContactForm: false,
+	showContactForm: true,
+	formBaseURI: '//formspree.io/',
+	contactEmail: 'caremedtransport@gmail.com',
 	links: [
 		{
 			url: '/',

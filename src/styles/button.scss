@@ -60,4 +60,22 @@ a.callout-btn {
 			background: $caremedRed;
 		}
 	}
+
+	&--disabled {
+		opacity: 0.4;
+		pointer-events: none;
+		box-shadow: none !important;
+
+		&::after {
+			content: attr(data-warning);
+			display: none;
+		}
+
+		&:hover {
+			opacity: 0.4;
+			&::after {
+				display: block;
+			}
+		}
+	}
 }
