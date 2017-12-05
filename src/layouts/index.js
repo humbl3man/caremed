@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 
+import favicon from './../favicon.png';
+
 import Container from './../components/container';
 import './../styles/index.css';
 import './../styles/layout.scss';
@@ -71,12 +73,25 @@ const Footer = () => (
 const TemplateWrapper = ({ children }) => (
 	<div>
 		<Helmet
-			title="Caremed Transport"
-			meta={[
-				{ name: 'description', content: 'Sample' },
-				{ name: 'keywords', content: 'transport, medical' }
-			]}
-		/>
+			titleTemplate="Care MED Transport - %s"
+			defaultTitle="Care MED Transport"
+		>
+			<meta charSet="utf-8" />
+			<meta
+				name="viewport"
+				content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no"
+			/>
+			<meta
+				name="description"
+				content="Care MED Transport is a privately owned and operated company providing Non-emergency transportation to the community of Greater Los Angeles and Orange County. Care MED Transport was founded in 2016 based on experience that many people needed a service for transportation to go for doctor's appointment, medical treatments and other medical necessity."
+			/>
+			<link rel="shortcut icon" href={favicon} />
+			<link rel="canonical" href="http://caremedtransportoc.com/" />
+			<script
+				src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+				async
+			/>
+		</Helmet>
 		<Header />
 
 		{children()}

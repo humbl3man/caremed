@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from './../components/container';
 import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
 import './../styles/generic.scss';
 

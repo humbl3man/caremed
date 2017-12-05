@@ -4,13 +4,11 @@ import FormSuccessFeedback from './contact-form-success';
 import FormFailFeedback from './contact-form-fail';
 // import { scrollTo } from './../helpers';
 import scroll from 'scroll';
-import scrollDoc from 'scroll-doc';
 import { contactEmail, formBaseURI } from './../config';
 import fetch from 'unfetch';
 
 const EMAIL = contactEmail;
 const FORM_ENDPOINT = `https://formspree.io/${EMAIL}`;
-const scrollElement = scrollDoc();
 export default class ContactForm extends Component {
 	constructor() {
 		super();
@@ -243,8 +241,6 @@ export default class ContactForm extends Component {
 			method: 'POST'
 		})
 			.then(res => {
-				console.log('response', res);
-
 				if (res.status !== 200) {
 					return this.setState(
 						{
@@ -268,8 +264,6 @@ export default class ContactForm extends Component {
 				);
 			})
 			.catch(err => {
-				console.log('err', res);
-
 				this.setState(
 					{
 						formSubmitSuccess: false,
@@ -299,8 +293,6 @@ export default class ContactForm extends Component {
 				_subject
 			} = this.state;
 
-			console.log('GOTCHA', _gotcha);
-
 			let formData = {
 				'Contact Name': name,
 				'Email Address': email,
@@ -321,7 +313,6 @@ export default class ContactForm extends Component {
 
 			this.sendAppointmentRequest(formData);
 		} else {
-			console.error('Form is invalid.');
 			return;
 		}
 	};
@@ -605,10 +596,17 @@ export default class ContactForm extends Component {
 						color: #222;
 						width: 100%;
 						font-size: 0.8rem;
-						line-height: 36px;
+						// line-height: 36px;
 						padding: 0 5px 0 8px;
 						height: 36px;
 						transition: 200ms ease-in-out;
+						outline: 0;
+					}
+
+					.site-form textarea.form-input {
+						padding-top: 8px;
+						padding-bottom: 8px;
+						line-height: 1;
 					}
 
 					.site-form .form-input:focus {

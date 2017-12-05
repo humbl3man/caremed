@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './../styles/button.scss';
 
 const Button = props => {
-	const { isLink, cssClass, to, type, children, size } = props;
+	const { children, cssClass, isLink, size, to, type } = props;
 
 	if (isLink) {
 		return (
@@ -31,7 +31,7 @@ const Button = props => {
 };
 
 Button.propTypes = {
-	className: PropTypes.string,
+	cssClass: PropTypes.string,
 	isLink: PropTypes.bool,
 	size: PropTypes.string,
 	to: PropTypes.string,
@@ -39,9 +39,11 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-	className: '',
+	cssClass: '',
 	isLink: false,
 	size: 'large',
+	to: '',
+	type: 'button',
 	type: 'submit'
 };
 

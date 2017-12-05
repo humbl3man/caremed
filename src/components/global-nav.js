@@ -5,7 +5,9 @@ const MobileNav = props => {
 	const { links, isShown, handleClick } = props;
 
 	return (
-		<div className={isShown ? 'mobile-nav' : 'mobile-nav hidden'}>
+		<div
+			className={isShown ? 'mobile-nav' : 'mobile-nav mobile-nav--hidden'}
+		>
 			{links.map((link, index) => (
 				<Link
 					key={index}

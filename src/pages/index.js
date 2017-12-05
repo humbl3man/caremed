@@ -15,8 +15,8 @@ import HeroSlider from 'react-slick';
 const heroSliderOptions = {
 	arrows: false,
 	autoplay: true,
-	autoPlaySpeed: 8500,
-	speed: 3000,
+	autoplaySpeed: 5000,
+	speed: 1000,
 	dots: false,
 	draggable: false,
 	fade: true,

@@ -3,6 +3,9 @@
 
 body {
 	background: #fafafa;
+	@media only screen and (max-width: 767px) {
+		padding-top: 80px;
+	}
 }
 
 @mixin flex($justify-content: null, $align-items: null ) {
@@ -120,14 +123,28 @@ body {
 
 	@media only screen and (max-width: 767px) {
 		.mobile-nav {
-			background: #8e0217;
+			background-color: #8e0217;
 			left: 0;
 			padding: 20px;
-			position: absolute;
-			top: 80px;
+			position: fixed;
+			top: 0;
 			width: 100%;
 			z-index: 999;
 			text-align: center;
+			top: 80px;
+			transition: all 200ms ease-in-out 50ms, z-index 1ms linear 200ms;
+			will-change: visibility;
+			// visibility: visible;
+			transform: translateY(0);
+			opacity: 1;
+			&--hidden {
+				pointer-events: none;
+				// visibility: hidden;
+				transform: translateY(-2em);
+				transition-delay: 50ms, 1ms, 100ms;
+				z-index: -1;
+				opacity: 0;
+			}
 		}
 
 		.mobile-nav a {
@@ -151,6 +168,15 @@ body {
 .site-header {
 	background-color: #b3001b;
 	background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+
+	@media only screen and (max-width: 767px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 80px;
+		z-index: 1001;
+	}
 
 	.brand {
 		a {
