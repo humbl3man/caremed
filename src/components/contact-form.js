@@ -596,7 +596,6 @@ export default class ContactForm extends Component {
 						color: #222;
 						width: 100%;
 						font-size: 0.8rem;
-						// line-height: 36px;
 						padding: 0 5px 0 8px;
 						height: 36px;
 						transition: 200ms ease-in-out;
