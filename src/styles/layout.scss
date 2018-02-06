@@ -83,9 +83,7 @@ body {
 .bucket {
 	padding: 15px 25px;
 	background: #fff;
-	border: 1px solid #eee;
-	// box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
-
+	border: 1px solid #ccc;
 	&--alt {
 		border-color: $caremedRed;
 	}
@@ -127,19 +125,16 @@ body {
 			left: 0;
 			padding: 20px;
 			position: fixed;
-			top: 0;
 			width: 100%;
 			z-index: 999;
 			text-align: center;
 			top: 80px;
 			transition: all 200ms ease-in-out 50ms, z-index 1ms linear 200ms;
 			will-change: visibility;
-			// visibility: visible;
 			transform: translateY(0);
 			opacity: 1;
 			&--hidden {
 				pointer-events: none;
-				// visibility: hidden;
 				transform: translateY(-2em);
 				transition-delay: 50ms, 1ms, 100ms;
 				z-index: -1;

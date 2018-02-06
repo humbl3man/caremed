@@ -48,60 +48,57 @@ const Hero = ({ cssClass, text }) => (
 
     <style jsx>
       {`
-				.hero h1 {
-					color: #b3001b;
-					font-size: 3rem;
-					margin-bottom: 10px;
-					font-weight: bold;
-				}
-				.hero h3 {
-					font-size: 1.5rem;
-					color: #fff;
-					margin-bottom: 50px;
-				}
+        .hero h1 {
+          color: #b3001b;
+          font-size: 3rem;
+          margin-bottom: 10px;
+          font-weight: bold;
+        }
+        .hero h3 {
+          font-size: 1.5rem;
+          color: #fff;
+          margin-bottom: 50px;
+        }
 
-				.hero {
-					color: #fff;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-					height: 450px;
-					margin-bottom: 60px;
-					background-color: #222;
-					background-size: cover;
-					background-position: center;
-					background-repeat: no-repeat;
-				}
+        .hero {
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 450px;
+          margin-bottom: 60px;
+          background-color: #222;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
 
-				.hero-1 {
-					background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-						url(${heroImage1});
-				}
+        .hero-1 {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroImage1});
+        }
 
-				.hero-2 {
-					background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-						url(${heroImage2});
-				}
+        .hero-2 {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroImage2});
+        }
 
-				.hero-3 {
-					background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-						url(${heroImage3});
-				}
+        .hero-3 {
+          background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${heroImage3});
+        }
 
-				@media only screen and (max-width: 767px) {
-					.hero {
-						text-align: center;
-					}
+        @media only screen and (max-width: 767px) {
+          .hero {
+            text-align: center;
+          }
 
-					.hero h1 {
-						font-size: 2.2rem;
-					}
+          .hero h1 {
+            font-size: 2.2rem;
+          }
 
-					.hero p {
-						font-size: 1.2rem;
-					}
-				}
-			`}
+          .hero p {
+            font-size: 1.2rem;
+          }
+        }
+      `}
     </style>
   </div>
 );
@@ -132,80 +129,85 @@ const IndexPage = () => (
           text="We are here to provide safe, convenient and reliable transportation to your chosen destination."
         />
       </div>
-		</HeroSlider>
-		
-		<Container>
-			<h3><strong>What we offer</strong></h3>
-			<div className="featured">
-			<CardStack>
-				<Card>
-					<CardSection>
-						<h4 className="card__title"><i className="icon icon-clock" /> 24 HOUR SERVICE</h4>
-					</CardSection>
-					<CardSection>
-						<p className="card__text">
-						That&apos;s why we at Care MED Transport are providing a 24-hour service that should
-							answer to their needs whenever they need it, wherever they are.
-						</p>
-					</CardSection>
-				</Card>
-				<Card>
-					<CardSection>
-						<h4 className="card__title"><i className="icon icon-calendar" /> SAME-DAY APPOINTMENT</h4>
-					</CardSection>
-					<CardSection>
-						<p className="card__text">
-						We know that dealing with an ailment is already tough. That's why we chose not to
-						burden our patients with more things to worry about and decided to allow same-day
-						appointments that will allow us to cater to more people who require the special kind
-						of care that we can provide.
-						</p>
-					</CardSection>
-				</Card>
-				<Card>
-					<CardSection>
-						<h4 className="card__title"> <i className="icon icon-star" /> QUALITY SERVICE</h4>
-					</CardSection>
-					<CardSection>
-						<p className="card__text">
-						We believe that our clients deserve only the best quality service that we can provide
-						and it is our mission to make life easier for people who can use for things to get
-						better.
-						</p>
-					</CardSection>
-				</Card>				
-				</CardStack>
-				<style jsx>
-        {`
-					.featured {
-						margin-bottom: 60px;
-					}
+    </HeroSlider>
 
-					.featured h4 {
-						color: #b3001b;
-						padding-bottom: 10px;
-						font-weight: 700;
-					}
+    <Container>
+      <h3>
+        <strong>What we offer</strong>
+      </h3>
+      <div className="featured">
+        <CardStack>
+          <Card>
+            <CardSection>
+              <h4 className="card__title">
+                <i className="icon icon-clock" /> 24 HOUR SERVICE
+              </h4>
+            </CardSection>
+            <CardSection>
+              <p className="card__text">
+                That&apos;s why we at Care MED Transport are providing a 24-hour service that should answer to their
+                needs whenever they need it, wherever they are.
+              </p>
+            </CardSection>
+          </Card>
+          <Card>
+            <CardSection>
+              <h4 className="card__title">
+                <i className="icon icon-calendar" /> SAME-DAY APPOINTMENT
+              </h4>
+            </CardSection>
+            <CardSection>
+              <p className="card__text">
+                We know that dealing with an ailment is already tough. That's why we chose not to burden our patients
+                with more things to worry about and decided to allow same-day appointments that will allow us to cater
+                to more people who require the special kind of care that we can provide.
+              </p>
+            </CardSection>
+          </Card>
+          <Card>
+            <CardSection>
+              <h4 className="card__title">
+                {' '}
+                <i className="icon icon-star" /> QUALITY SERVICE
+              </h4>
+            </CardSection>
+            <CardSection>
+              <p className="card__text">
+                We believe that our clients deserve only the best quality service that we can provide and it is our
+                mission to make life easier for people who can use for things to get better.
+              </p>
+            </CardSection>
+          </Card>
+        </CardStack>
+        <style jsx>
+          {`
+            .featured {
+              margin-bottom: 60px;
+            }
 
-					.featured h4 i {
-						display: inline-block;
-						margin-right: 5px;
-						transform: scale(1.2) translateY(-2px);
-					}
-				`}
-      </style>
-			</div>	
+            .featured h4 {
+              color: #b3001b;
+              font-weight: 700;
+            }
 
-		</Container>
+            .featured h4 i {
+              display: inline-block;
+              margin-right: 5px;
+              transform: scale(1.2) translateY(-2px);
+            }
+          `}
+        </style>
+      </div>
+    </Container>
 
     <div className="yelp">
       <Container>
         <h3>
           <strong>What Customers Are Saying</strong>
-				</h3>
-				<div style={{ margin: '30px 0' }}>
-					<Reviews />
-				</div>
+        </h3>
+        <div style={{ margin: '30px 0' }}>
+          <Reviews />
+        </div>
       </Container>
     </div>
 
@@ -214,55 +216,54 @@ const IndexPage = () => (
         <div className="inner">
           <h2>Serving our community with pride, respect and safe transportation.</h2>
           <Button cssClass="callout-btn--secondary" to="/contact" isLink>
-						Contact Us
+            Contact Us
           </Button>
         </div>
       </Container>
 
       <style jsx>
         {`
-					.extra {
-						padding: 120px 30px;
-						text-align: center;
-						background-color: #222;
-						background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-							url(${splashImage});
-						background-position: center;
-						background-size: cover;
-						background-repeat: no-repeat;
-					}
+          .extra {
+            padding: 120px 30px;
+            text-align: center;
+            background-color: #222;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${splashImage});
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
 
-					.extra h2 {
-						color: #fff;
-						margin: 0;
-					}
+          .extra h2 {
+            color: #fff;
+            margin: 0;
+          }
 
-					.inner {
-						display: flex;
-						justify-content: space-between;
-						align-items: center;
-					}
+          .inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
 
-					@media only screen and (min-width: 1024px) {
-						background-attachment: fixed;
-					}
+          @media only screen and (min-width: 1024px) {
+            background-attachment: fixed;
+          }
 
-					@media only screen and (min-width: 767px) and (max-width: 1024px) {
-						.extra h2 {
-							flex: 0 0 70%;
-						}
-					}
+          @media only screen and (min-width: 767px) and (max-width: 1024px) {
+            .extra h2 {
+              flex: 0 0 70%;
+            }
+          }
 
-					@media only screen and (max-width: 767px) {
-						.extra h2 {
-							margin-bottom: 30px;
-						}
+          @media only screen and (max-width: 767px) {
+            .extra h2 {
+              margin-bottom: 30px;
+            }
 
-						.inner {
-							flex-direction: column;
-						}
-					}
-				`}
+            .inner {
+              flex-direction: column;
+            }
+          }
+        `}
       </style>
     </div>
 
@@ -271,59 +272,58 @@ const IndexPage = () => (
         <h3 className="title">
           <strong>
             {' '}
-						Care MED Transport is a Non-Emergency Transportation service specializing in wheelchair
-						transportation to:
+            Care MED Transport is a Non-Emergency Transportation service specializing in wheelchair transportation to:
           </strong>
         </h3>
         <div className="featured-bottom-wrapper">
           <div className="bucket">
             <h3>
-							Nursing Facility Transfers <span className="icon icon-check" />
+              Nursing Facility Transfers <span className="icon icon-check" />
             </h3>
           </div>
 
           <div className="bucket">
             <h3>
-							Outpatient Care <span className="icon icon-check" />
+              Outpatient Care <span className="icon icon-check" />
             </h3>
           </div>
 
           <div className="bucket">
             <h3>
-							Dialysis Center <span className="icon icon-check" />
+              Dialysis Center <span className="icon icon-check" />
             </h3>
           </div>
 
           <div className="bucket">
             <h3>
-							Doctors Appointments
+              Doctors Appointments
               <span className="icon icon-check" />
             </h3>
           </div>
 
           <div className="bucket">
             <h3>
-							Discharge from Hospitals
+              Discharge from Hospitals
               <span className="icon icon-check" />
             </h3>
           </div>
 
           <div className="bucket">
             <h3>
-							Discharge from Care Center
+              Discharge from Care Center
               <span className="icon icon-check" />
             </h3>
           </div>
 
           <div className="bucket">
             <h3>
-							Radiation Treatment <span className="icon icon-check" />
+              Radiation Treatment <span className="icon icon-check" />
             </h3>
           </div>
 
           <div className="bucket">
             <h3>
-							Chemotherapy Treatment <span className="icon icon-check" />
+              Chemotherapy Treatment <span className="icon icon-check" />
             </h3>
           </div>
         </div>
@@ -331,50 +331,48 @@ const IndexPage = () => (
 
       <style jsx>
         {`
-					.featured-bottom {
-						margin: 50px 0;
-					}
+          .featured-bottom {
+            margin: 50px 0;
+          }
 
-					.featured-bottom .icon-check {
-						color: #b3001b;
-						display: inline-block;
-						font-size: 120%;
-						margin-left: 10px;
-					}
+          .featured-bottom .icon-check {
+            color: #b3001b;
+            display: inline-block;
+            font-size: 120%;
+            margin-left: 10px;
+          }
 
-					.featured-bottom-wrapper {
-						display: flex;
-						justify-content: center;
-						flex-wrap: wrap;
-					}
+          .featured-bottom-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+          }
 
-					.featured-bottom-wrapper h3 {
-						margin: 0;
-					}
+          .featured-bottom-wrapper h3 {
+            margin: 0;
+            color: #b3001b;
+          }
 
-					.featured-bottom-wrapper > div {
-						flex: 0 0 45%;
-						height: 90px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-						text-align: center;
-						margin: 15px 2.5%;
-						padding: 24px;
-						transition: background 600ms ease-in-out;
-					}
+          .featured-bottom-wrapper > div {
+            flex: 0 0 45%;
+            height: 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 15px 2.5%;
+            padding: 24px;
+            border: 1px solid #b3001b;
+            transition: background 100ms ease-in-out;
+          }
 
-					.featured-bottom-wrapper > div:hover {
-						background: #cddbea;
-					}
-
-					@media only screen and (max-width: 767px) {
-						.featured-bottom-wrapper > div {
-							flex-basis: 100%;
-							margin-bottom: 0 0 30px;
-						}
-					}
-				`}
+          @media only screen and (max-width: 767px) {
+            .featured-bottom-wrapper > div {
+              flex-basis: 100%;
+              margin-bottom: 0 0 30px;
+            }
+          }
+        `}
       </style>
     </div>
   </div>
