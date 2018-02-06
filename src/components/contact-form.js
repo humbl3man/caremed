@@ -109,33 +109,23 @@ export default class ContactForm extends Component {
 				break;
 			case 'pickupLocation':
 				pickupLocationValid = value.trim().length > 0;
-				errors['pickupLocation'] = pickupLocationValid
-					? ''
-					: `this field is required`;
+				errors['pickupLocation'] = pickupLocationValid ? '' : `this field is required`;
 				break;
 			case 'pickupTime':
 				pickupTimeValid = value.trim().length > 0;
-				errors['pickupTime'] = pickupTimeValid
-					? ''
-					: `this field is required`;
+				errors['pickupTime'] = pickupTimeValid ? '' : `this field is required`;
 				break;
 			case 'dropoffLocation':
 				dropoffLocationValid = value.trim().length > 0;
-				errors['dropoffLocation'] = dropoffLocationValid
-					? ''
-					: `this field is required`;
+				errors['dropoffLocation'] = dropoffLocationValid ? '' : `this field is required`;
 				break;
 			case 'timeToContact':
 				timeToContactValid = value.trim().length > 0;
-				errors['timeToContact'] = timeToContactValid
-					? ''
-					: `this field is required`;
+				errors['timeToContact'] = timeToContactValid ? '' : `this field is required`;
 				break;
 			case 'email':
 				isEmailEntered = value.length > 0;
-				isEmailValidFormat = value.match(
-					/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i
-				);
+				isEmailValidFormat = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
 
 				emailValid = isEmailEntered && isEmailValidFormat;
 
@@ -325,11 +315,7 @@ export default class ContactForm extends Component {
 		if (this.state.formSubmitSuccess) {
 			return <FormSuccessFeedback />;
 		} else if (this.state.formSubmitFail) {
-			return (
-				<FormFailFeedback
-					handleFeedbackDismiss={this.handleFeedbackDismiss}
-				/>
-			);
+			return <FormFailFeedback handleFeedbackDismiss={this.handleFeedbackDismiss} />;
 		}
 
 		function errorClass(error) {
@@ -344,12 +330,7 @@ export default class ContactForm extends Component {
 				noValidate={true}
 				onSubmit={this.handleFormSubmit}
 			>
-				{/* <input
-					type="hidden"
-					name="_subject"
-					value="Appointment Request"
-				/> */}
-
+				{/* gotcha to prevent spamming  */}
 				<input
 					type="text"
 					name="_gotcha"
@@ -359,9 +340,7 @@ export default class ContactForm extends Component {
 				/>
 
 				<div
-					className={`form-block is-required${errorClass(
-						this.state.errors.name
-					)}`}
+					className={`form-block is-required${errorClass(this.state.errors.name)}`}
 					data-error={this.state.errors['name']}
 				>
 					<label htmlFor="contact-name">Contact name</label>
@@ -378,9 +357,7 @@ export default class ContactForm extends Component {
 				</div>
 
 				<div
-					className={`form-block is-required${errorClass(
-						this.state.errors.phone
-					)}`}
+					className={`form-block is-required${errorClass(this.state.errors.phone)}`}
 					data-error={this.state.errors['phone']}
 				>
 					<label htmlFor="contact-phone">Phone</label>
@@ -397,9 +374,7 @@ export default class ContactForm extends Component {
 				</div>
 
 				<div
-					className={`form-block is-required${errorClass(
-						this.state.errors.email
-					)}`}
+					className={`form-block is-required${errorClass(this.state.errors.email)}`}
 					data-error={this.state.errors['email']}
 				>
 					<label htmlFor="contact-email">Email</label>
@@ -416,9 +391,7 @@ export default class ContactForm extends Component {
 				</div>
 
 				<div
-					className={`form-block is-required${errorClass(
-						this.state.errors.pickupLocation
-					)}`}
+					className={`form-block is-required${errorClass(this.state.errors.pickupLocation)}`}
 					data-error={this.state.errors['pickupLocation']}
 				>
 					<label htmlFor="pickup-location">Pickup Location</label>
@@ -434,9 +407,7 @@ export default class ContactForm extends Component {
 				</div>
 
 				<div
-					className={`form-block is-required${errorClass(
-						this.state.errors.pickupTime
-					)}`}
+					className={`form-block is-required${errorClass(this.state.errors.pickupTime)}`}
 					data-error={this.state.errors['pickupTime']}
 				>
 					<label htmlFor="pickup-time">Pickup Time</label>
@@ -452,9 +423,7 @@ export default class ContactForm extends Component {
 				</div>
 
 				<div
-					className={`form-block is-required${errorClass(
-						this.state.errors.dropoffLocation
-					)}`}
+					className={`form-block is-required${errorClass(this.state.errors.dropoffLocation)}`}
 					data-error={this.state.errors['dropoffLocation']}
 				>
 					<label htmlFor="dropoff-location">Drop-off Location</label>
@@ -470,14 +439,10 @@ export default class ContactForm extends Component {
 				</div>
 
 				<div
-					className={`form-bloc is-requiredk${errorClass(
-						this.state.errors.timeToContact
-					)}`}
+					className={`form-bloc is-requiredk${errorClass(this.state.errors.timeToContact)}`}
 					data-error={this.state.errors['timeToContact']}
 				>
-					<label htmlFor="time-to-contact">
-						Best Time to Contact
-					</label>
+					<label htmlFor="time-to-contact">Best Time to Contact</label>
 					<input
 						className="form-input"
 						id="time-to-contact"
@@ -527,13 +492,7 @@ export default class ContactForm extends Component {
 					/>
 				</div>
 
-				<div
-					className={
-						!this.state.formValid
-							? 'form-block has-warning'
-							: 'form-block'
-					}
-				>
+				<div className={!this.state.formValid ? 'form-block has-warning' : 'form-block'}>
 					<Button
 						cssClass={`callout-btn--primary callout-btn--with-icon callout-btn--wide${
 							this.state.formValid ? '' : ' callout-btn--disabled'
@@ -547,9 +506,8 @@ export default class ContactForm extends Component {
 					<span className="warning">
 						{!this.state.formValid && (
 							<span>
-								<span className="icon icon-warning" /> You are
-								missing required fields. Please correct the form
-								before proceeding.
+								<span className="icon icon-warning" /> You are missing required fields. Please
+								correct the form before proceeding.
 							</span>
 						)}
 					</span>
@@ -618,17 +576,17 @@ export default class ContactForm extends Component {
 						box-shadow: 0 0 4px rgba(179, 0, 27, 0.5);
 					}
 
-					.site-form .has-error::after {
+					.site-form .form-block::after {
+						display: none;
 						content: attr(data-error);
 						font-size: 13px;
 						padding: 4px 8px;
-						color: red;
 						background-color: #b3001b;
 						border-radius: 0 0 3px 3px;
 						color: #fff;
-
-						pointer-events: none;
-						float: right;
+					}
+					.site-form .form-block.has-error::after {
+						display: block;
 					}
 
 					.site-form .form-input.has-error:after {
@@ -660,8 +618,7 @@ export default class ContactForm extends Component {
 						pointer-events: none;
 						opacity: 0;
 						transition: opacity 200ms ease 1ms,
-							transform 200ms
-								cubic-bezier(0.68, -0.55, 0.27, 1.55) 300ms;
+							transform 200ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 300ms;
 						font-size: 0.9rem;
 						border-radius: 4px;
 						text-align: center;
