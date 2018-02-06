@@ -1,0 +1,69 @@
+@import './_settings.scss';
+
+.reviews-wrapper {
+	display: flex;
+	justify-content: 'space-between';
+	margin: 30px 0;
+
+	@media only screen and (max-width: 767px) {
+		flex-wrap: wrap;
+	}
+}
+
+// Yelp Reviews
+.review {
+	margin-right: 30px;
+	flex: 1 1 33.333%;
+	background: #fff;
+	border: 1px solid #eee;
+	// box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+	align-self: stretch;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@media only screen and (max-width: 767px) {
+		margin-bottom: 30px;
+		margin-right: 0;
+		flex-basis: 100%;
+		// flex: 0 0 100%;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&__body {
+		padding: 25px 15px 30px 15px;
+		border-bottom: 1px solid #eee;
+	}
+
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 8px 15px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 1.5;
+		margin-bottom: 5px;
+	}
+
+	&__author {
+		margin-bottom: 0;
+		font-size: 14px;
+		font-style: italic;
+	}
+
+	&__avatar {
+		width: 50px;
+		height: 50px;
+		margin-bottom: 0;
+		margin-right: 8px;
+		border-radius: 50%;
+		border: 3px solid $caremedRed;
+	}
+}
